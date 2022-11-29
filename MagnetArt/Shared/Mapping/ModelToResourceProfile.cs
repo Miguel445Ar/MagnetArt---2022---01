@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using MagnetArt.Providers.Domain.Models;
+using MagnetArt.Providers.Resources;
 
 namespace MagnetArt.Shared.Mapping
 {
@@ -6,7 +8,7 @@ namespace MagnetArt.Shared.Mapping
     {
         public ModelToResourceProfile()
         {
-
+            CreateMap<Provider, ProviderResource>();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MagnetArt.Shared.Extensions
 
                 foreach (var property in entity.GetProperties())
                 {
-                    property.SetColumnName(property.GetColumnName().ToSnakeCase());
+                    property.SetColumnName(property.GetColumnBaseName().ToSnakeCase());
 
                 }
 

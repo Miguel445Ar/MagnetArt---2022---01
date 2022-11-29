@@ -1,4 +1,6 @@
-﻿namespace MagnetArt.Providers.Domain.Models
+﻿using MagnetArt.Authors.Domain.Models;
+
+namespace MagnetArt.Providers.Domain.Models
 {
     public class Provider
     {
@@ -7,7 +9,7 @@
         public string LastName { get; set; }
         public string ApiUrl { get; set; } = "http://api-default.com/";
         public bool KeyRequired { get; set; } = false;
-        public string ApiKey { get; set; }
-        public int ProviderId { get; set; }
+        public string ApiKey { get; set; } = "defaultHash";
+        public List<Author> Authors { get; set; } = new List<Author>();
     }
 }

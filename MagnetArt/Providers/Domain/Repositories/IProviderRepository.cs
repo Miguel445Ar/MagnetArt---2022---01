@@ -5,8 +5,8 @@ namespace MagnetArt.Providers.Domain.Repositories
     public interface IProviderRepository
     {
         Task<IEnumerable<Provider>> ListAsync();
-        Task AddAsync();
-        Task<Provider> FindById(int id);
+        Task AddAsync(Provider provider);
+        Task<Provider> FindByIdAsync(int id);
         void Update(Provider provider);
         void Remove(Provider provider);
     }

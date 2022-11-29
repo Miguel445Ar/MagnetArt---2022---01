@@ -63,8 +63,7 @@ namespace MagnetArt.Providers.Services
             var existingProvider = await _providerRepository.FindByIdAsync(id);
             if (existingProvider == null)
                 return new ProviderResponse($"Not provider found with id {id}");
-            existingProvider.FirstName = provider.FirstName;
-            existingProvider.LastName = provider.LastName;
+            existingProvider.Name = provider.Name;
             existingProvider.ApiUrl = provider.ApiUrl;
             existingProvider.KeyRequired = provider.KeyRequired;
             existingProvider.ApiKey = provider.ApiKey;
